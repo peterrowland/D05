@@ -7,11 +7,25 @@
 # Imports
 
 # Body
+def long_words():
 
+    try:
+        fin = open('words.txt')
+
+    except:
+        print("can't open file")
+
+    else:
+        c = 0
+        for line in fin:
+            word = line.strip()
+            if len(word) > 20:
+                print(word)
+                c += 1
 
 ##############################################################################
 def main():
-    pass  # Call your functions here.
+    long_words()
 
 if __name__ == '__main__':
     main()
